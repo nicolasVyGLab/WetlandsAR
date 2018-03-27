@@ -1,11 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
-using Vuforia;
+
 
 public class CameraFocusController : MonoBehaviour {
 
 
-    void Start () 
+   /* void Start () 
     {
 		InvokeRepeating ("SetAutofocus", 0, 1);
     }
@@ -23,5 +23,5 @@ public class CameraFocusController : MonoBehaviour {
             // never actually seen a device that doesn't support this, but just in case
             Debug.Log("this device doesn't support auto focus");
         }
-    }
+    }*/
 }
