@@ -8,7 +8,7 @@ public class CreadorAPartirDeXML : MonoBehaviour {
 
 	public GameObject objetoPrefab;
 	public GameObject persona,menu,manager;
-	public Sprite imagenPlanta, imagenAnimal,imagenHombre,imagenPaisaje;
+	public Sprite imagenPlanta, imagenCangrejo,imagenDelfin,imagenAve,imagenHombre,imagenPaisaje;
 	public string xml;
 
 	// Use this for initialization
@@ -132,8 +132,15 @@ public class CreadorAPartirDeXML : MonoBehaviour {
 					string categoria = puntoDeInteres.SelectSingleNode ("Categoria").InnerText;
 					if (categoria.Equals ("Hombre")) {
 						nuevoPunto.transform.Find ("Nivel2").Find ("Button").GetComponent<Image> ().sprite = imagenHombre;
-					} else if (categoria.Equals ("Animal")) {
-						nuevoPunto.transform.Find ("Nivel2").Find ("Button").GetComponent<Image> ().sprite = imagenAnimal;
+					} 
+					else if (categoria.Equals ("Cangrejo")) {
+						nuevoPunto.transform.Find ("Nivel2").Find ("Button").GetComponent<Image> ().sprite = imagenCangrejo;
+					} 
+					else if (categoria.Equals ("Delfin")) {
+						nuevoPunto.transform.Find ("Nivel2").Find ("Button").GetComponent<Image> ().sprite = imagenDelfin;
+					} 
+					else if (categoria.Equals ("Ave")) {
+						nuevoPunto.transform.Find ("Nivel2").Find ("Button").GetComponent<Image> ().sprite = imagenAve;
 					}
 					else if (categoria.Equals ("Paisaje")) {
 						nuevoPunto.transform.Find ("Nivel2").Find ("Button").GetComponent<Image> ().sprite = imagenPaisaje;
